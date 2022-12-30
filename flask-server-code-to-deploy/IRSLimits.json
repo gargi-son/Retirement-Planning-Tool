@@ -1,0 +1,65 @@
+{
+  "HSA": {
+    "type": "HSA",
+    "year": 2023,
+    "limit": 3850,
+    "catch_up": 1000,
+    "contribution_taxed": 0,
+    "gains_taxed": 0,
+    "distributions_taxed": 0
+  },
+  "Trad 401k": {
+    "type": "401k",
+    "year": 2023,
+    "limit": 22500,
+    "catch_up": 7500,
+    "contribution_taxed": 0,
+    "gains_taxed": 0,
+    "distributions_taxed": 1
+  },
+  "Roth 401k": {
+    "type": "401k",
+    "year": 2023,
+    "limit": 22500,
+    "catch_up": 7500,
+    "contribution_taxed": 1,
+    "gains_taxed": 0,
+    "distributions_taxed": 0
+  },
+  "Trad IRA": {
+    "type": "IRA",
+    "year": 2023,
+    "limit": 6500,
+    "catch_up": 1000,
+    "contribution_taxed": 0,
+    "gains_taxed": 0,
+    "distributions_taxed": 1
+  },
+  "Roth IRA": {
+    "type": "IRA",
+    "year": 2023,
+    "limit": 6500,
+    "catch_up": 1000,
+    "contribution_taxed": 1,
+    "gains_taxed": 0,
+    "distributions_taxed": 0
+  },
+  "After_Tax_401k": {
+    "type": "401k",
+    "year": 2023,
+    "limit": 66000,
+    "catch_up": 7500,
+    "contribution_taxed": 1,
+    "gains_taxed": 0,
+    "distributions_taxed": 1
+  },
+  "Brokerages": {
+    "type": "Brokerage",
+    "year": 2023,
+    "limit": 1000000000,
+    "catch_up": 1000000000,
+    "contribution_taxed": 1,
+    "gains_taxed": 1,
+    "distributions_taxed": 0
+  }
+}

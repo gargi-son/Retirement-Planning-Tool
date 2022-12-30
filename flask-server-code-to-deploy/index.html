@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1 my-3 text-center">Welcome to Retirement Planning Tool</h1>
+      <img
+        src="images/retirement.jpg"
+        alt="retirement img"
+        class="img-fluid d-flex mx-auto"
+      />
+      <p class="h6 my-4 text-center">
+        Tell us more details about you and your household for our retirement tool to give you an estimate of where you stand for retirement and a variety of actions that can help you prepare for retirement.			 
+      </p>
+      <button id="turn_on" class="d-block btn btn-success btn-lg mx-auto">
+        Take On
+      </button>
+      <div class="box">
+        <h2 class="h2 mt-3 mb-4">Let’s look at your<em> present status</em></h2>
+        <form id="form">
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field1" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Annual Income &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Income can be from any source e.g. Employment,property rent,part-time"
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="total_current_income"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field1"
+                class="form-control"
+                required
+              />
+            </div>
+            <span class="spent_error">Please check the entered amount, income should be greater than annual spending and taxes.</span>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field2" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>How old are you? &nbsp
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="current_age"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="1"
+                max="150"
+                id="field2"
+                class="form-control"
+                required
+              />
+            </div>
+            <span class="age_error">Please check the age,age should be greater than 0 and less than retirement age</span>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field3" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>What's your Annual Spending? &nbsp
+            </label>
+
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="current_annual_spending"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field3"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field4" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Annual Tax Amount &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Overall amount that's being paid as taxes. It can include property,income, federal, local, state taxes."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="current_amount_paying_in_taxes_annually"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field4"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Field-5 -->
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field5" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Account Type &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="lorem ipsum dolor sit amet consectetur voluptate."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              > </label
+            ><a href="javascript:void(0);" id="add" class="btn btn-primary col-sm-1"
+              >Add more accounts</a
+            >
+            <div class="col-sm-9 form-field-inside">
+              <select class="form-select" name="field5_option" id="field5_option">
+                <option value="all">All</option>
+                <option value="Trad IRA">Trad IRA</option>
+                <option value="Roth IRA">Roth IRA</option>
+                <option value="Trad 401k">Trad 401k</option>
+                <option value="Roth 401k">Roth 401k</option>
+                <option value="HSA">HSA</option>
+                <option value="Brokerages">Brokerages</option>
+              </select>
+              <span class="error">This data is required</span>
+            </div>
+
+            <div class="row row-change">
+              <label for="field5" class="col-sm-2 mt-3 col-form-label"
+                >What would be your total yearly investment contribution?
+              </label>
+              <div class="col-sm-10 mt-3">
+                <input
+                  type="number"
+                  name="total_yearly_investment_contribution"
+                  class="form-control"
+									required
+                />
+              </div>
+              <label for="field5" class="col-sm-2 mt-3 col-form-label"
+                >What is your current balance in your investment account?
+              </label>
+              <div class="col-sm-10 mt-3">
+                <input
+                  type="number"
+                  name="current_balance_investment_accounts"
+                  onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                  min="0"
+                  class="form-control"
+									required	
+                />
+              </div>
+              <label for="field5" class="col-sm-2 mt-3 col-form-label"
+                >What would be the rate of return of your investment?
+              </label>
+              <div class="col-sm-10 mt-3">
+                <input
+                  type="number"
+                  name="rate_of_return_all_investments"
+                  onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                  min="0"
+                  class="form-control"
+                  required
+											
+                />
+              </div>
+              <h2 class="h6 mt-3 mb-4"><u><em>Please select your ETF and mutual funds:</em></u></h2>		
+              <label for="field5" class="col-sm-2 mt-3 col-form-label">US Stocks
+              </label>
+              <div class="col-sm-10 mt-3 form-field-inside">
+                <select class="form-select" name="usChoice" id="usChoice" required>
+                  <option value="VOO">VOO</option>
+                  <option value="VTI">VTI</option>
+                  <option value="DFAC">DFAC</option>
+                  <option value="IVV">IVV</option>
+                  <option value="VUG">VUG</option>
+                  <option value="SPY">SPY</option>
+                  <option value="QQQ">QQQ</option>
+                  <option value="VTV">VTV</option>
+                </select>
+                <span class="error">This data is required</span>
+              </div>
+              <label for="field5" class="col-sm-2 mt-3 col-form-label">International Stocks
+              </label>
+              <div class="col-sm-10 mt-3 form-field-inside">
+                <select class="form-select" name="intrnlChoice" id="intrnlChoice" required>
+                  <option value="VXUS">VXUS</option>
+                  <option value="SPDW">SPDW</option>
+                  <option value="VWO">VWO</option>
+                  <option value="IXUS">IXUS</option>
+                </select>
+                <span class="error">This data is required</span>
+              </div>
+              <label for="field5" class="col-sm-2 mt-3 col-form-label">Bonds
+              </label>
+              <div class="col-sm-10 mt-3 form-field-inside">
+                <select class="form-select" name="bondChoice" id="bondChoice" required>
+                  <option value="BND">BND</option>
+                  <option value="AGG">AGG</option>
+                </select>
+                <span class="error">This data is required</span>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+				    <h2 class="h4 mt-3 mb-4">Now, let's analyze your<em> expectations..</em></h2>																		 
+            <label for="field6" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>What would be your retirement age? &nbsp
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="retirement_age"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="1"
+                max="200"
+                id="field6"
+                class="form-control"
+                required
+              />
+            </div>
+            <span class="retire_age_error">Please check the age,age should be greater than 0 and current age should be less than retirement age</span>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field7" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>What would be your yearly retirement spending? &nbsp
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_annual_spending_in_retirement"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field7"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field8" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Monthly Social Security Benefits in retirement? &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="When you work and pay Social Security taxes, you earn credits toward Social Security benefits. You can earn up to four credits per year based on your annual earnings. If you were born in 1929 or later, you need 40 credits to get retirement benefits. The number of work credits you need for disability benefits depends on your age when you became disabled. Family members may qualify for benefits and do not need work credits. Please visit the Social Security Administration website or speak with a professional to determine if you may be entitled to Social Security benefits."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_monthly_SS_check_amount_in_retirement"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field8"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field9" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>What's your expected life expectancy after retirement? &nbsp
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_number_of_years_left_to_live_after_retirement"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field9"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field10" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Expected Annual Tax amount during retirement? &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Tax that you will be paying such as income,federal, state or other taxes if any."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_amount_will_pay_in_taxes_annually_in_retirement"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field10"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field11" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Rate how important expected return is to you on a scale of 1-3 &nbsp
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="how_important_expected_return_is_to_user"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field11"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field12" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Rate how important volatility is to you on a scale of 1-3 &nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="lorem ipsum dolor sit amet consectetur voluptate."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="how_important_volatility_is_to_user"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field12"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field13" class="col-sm-2 col-form-label"
+              ><span class="star">*</span>Rate how important cost factor is to you on a scale of 1-3&nbsp
+              <span
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="lorem ipsum dolor sit amet consectetur voluptate."
+                class="btn btn-sm btn-info rounded-circle"
+                >?</span
+              >
+            </label>
+            <span class="error">This data is required</span>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="how_important_cost_is_to_user"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field13"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field14" class="col-sm-2 col-form-label"
+              ><span class="star">&nbsp;</span>Expected yearly part-time income during retirement, if planning to do any. &nbsp
+            </label>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_part_time_job_annual_income_in_retirement"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field14"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field15" class="col-sm-2 col-form-label"
+              >Expected monthly Pension in retirement,if any? &nbsp
+            </label>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_monthly_pension_check_amount_in_retirement"
+                id="field15"
+                class="form-control"
+              />
+            </div>
+          </div>
+          <div class="mb-4 pb-2 row form-field">
+            <label for="field16" class="col-sm-2 col-form-label"
+              >What would be your expected inflation rate that you want us to consider? &nbsp
+            </label>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_inflation"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field16"
+                class="form-control"
+              />
+            </div>
+          </div>
+		    <div class="mb-4 pb-2 row form-field">
+            <label for="field17" class="col-sm-2 col-form-label"
+              >What would be your expected salary hike rate that you want us to consider? &nbsp
+            </label>
+            <div class="col-sm-10">
+              <input
+                type="number"
+                name="expected_salary_increase"
+                onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189"
+                min="0"
+                id="field17"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center mt-5 pb-5">
+            <div>
+              <input type="submit" value="Submit" class="btn btn-success" />
+            </div>
+            <div class="ms-4">
+              <input type="reset" value="Reset" class="btn btn-warning" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>

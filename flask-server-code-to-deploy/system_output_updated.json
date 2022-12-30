@@ -1,0 +1,193 @@
+{
+    "Recommendation1_BeforeRet": {
+        "constraints": true,
+        "sub_account_outputs": [
+            {
+                "account_asset_info": {
+                    "bondChoice": {
+                        "annualized_rate_of_return": 0.03069317456208598,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.0031846476912256545,
+                        "ticker": "BND",
+                        "weight": 0.5
+                    },
+                    "intrnlChoice": {
+                        "annualized_rate_of_return": 0.044392270414029156,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.011599224270644571,
+                        "ticker": "VXUS",
+                        "weight": 0
+                    },
+                    "usChoice": {
+                        "annualized_rate_of_return": 0.11828601836051189,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.011039589419993162,
+                        "ticker": "VOO",
+                        "weight": 0.5
+                    }
+                },
+                "account_expected_return": 0.07448959646129893,
+                "account_type": "IRA",
+                "account_variance": 0.000032697822582910914,
+                "constraints": true,
+                "debug": {
+                    "constraintbreakdown": {
+                        "ageLegalLimitsOnContributionSatisfied": true,
+                        "allAssetWeightsGreaterThanEqualZero": true,
+                        "allocateMoreAccordingToTraits": true,
+                        "assetWeightsSumToOne": true,
+                        "legalYearlyLimitsOnContributionSatisfied": true,
+                        "yearlyContributionGreaterThanEqualZero": true,
+                        "yearlyContributionWithInBudget": true
+                    }
+                },
+                "legal_limits_on_C_for_year_range": 6500,
+                "total_account_balance_at_end_of_range": 384539.99957034184,
+                "total_account_balance_each_year": [
+                    11516.274542837298,
+                    18307.893670682653,
+                    25386.492043800128,
+                    32764.195943959454,
+                    40453.64404785781,
+                    48468.00907832061,
+                    56821.020370371865,
+                    65526.9873908317,
+                    74600.8242517324,
+                    84058.07525954649,
+                    93914.94154399529,
+                    104188.30881205515,
+                    114895.77627470683,
+                    126055.68679598192,
+                    137687.1583159545,
+                    149810.11660150855,
+                    162445.3293809858,
+                    175614.44192119024,
+                    189340.01410769564,
+                    203645.55909197792,
+                    218555.58357157873,
+                    234095.62977230363,
+                    250292.31920437427,
+                    267173.3982674926,
+                    284767.785782943,
+                    303105.62253415934,
+                    322218.32290062326,
+                    342138.6286735494,
+                    362900.6651455464,
+                    384539.99957034184
+                ],
+                "total_cost_incurred_on_account_by_end_of_range": 151091.40324336817,
+                "total_growth_of_account_over_range": 206173.43946919485,
+                "total_yearly_cost_on_account": 11892.989677433254,
+                "total_yearly_investment_contributions_to_account": 6500
+            },
+            {
+                "account_asset_info": {
+                    "bondChoice": {
+                        "annualized_rate_of_return": 0.030693476145704723,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.0031846322641980247,
+                        "ticker": "BND",
+                        "weight": 0.5
+                    },
+                    "intrnlChoice": {
+                        "annualized_rate_of_return": 0.04439224324610147,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.011599224192754465,
+                        "ticker": "VXUS",
+                        "weight": 0
+                    },
+                    "usChoice": {
+                        "annualized_rate_of_return": 0.11828599548086438,
+                        "dateOfInception": "needToGETFromDB",
+                        "expense_ratio": 0.03,
+                        "std_dev_since_inception": 0.011039585788333871,
+                        "ticker": "VOO",
+                        "weight": 0.5
+                    }
+                },
+                "account_expected_return": 0.07448973581328455,
+                "account_type": "401k",
+                "account_variance": 0.00003269788219050366,
+                "constraints": true,
+                "debug": {
+                    "constraintbreakdown": {
+                        "ageLegalLimitsOnContributionSatisfied": true,
+                        "allAssetWeightsGreaterThanEqualZero": true,
+                        "allocateMoreAccordingToTraits": true,
+                        "assetWeightsSumToOne": true,
+                        "legalYearlyLimitsOnContributionSatisfied": true,
+                        "yearlyContributionGreaterThanEqualZero": true,
+                        "yearlyContributionWithInBudget": true
+                    }
+                },
+                "legal_limits_on_C_for_year_range": 22500,
+                "total_account_balance_at_end_of_range": 1409644.5548265993,
+                "total_account_balance_each_year": [
+                    63515.20174955545,
+                    88024.03937756708,
+                    113568.4990115396,
+                    140192.34090463186,
+                    167941.17440141388,
+                    196862.53607130548,
+                    227005.9711435465,
+                    258423.11838320535,
+                    291167.79855362704,
+                    325296.1066168657,
+                    360866.5078300507,
+                    397939.9379023086,
+                    436579.9073838202,
+                    476852.61046584236,
+                    518827.0383780785,
+                    562575.0975776608,
+                    608171.7329322129,
+                    655695.0561080177,
+                    705226.4793832334,
+                    756850.8551153925,
+                    810656.6211021066,
+                    866735.9520839937,
+                    925184.9176493678,
+                    986103.6468111995,
+                    1049596.4995382817,
+                    1115772.2455344533,
+                    1184744.2505721468,
+                    1256630.6706994667,
+                    1331554.6546534984,
+                    1409644.5548265993
+                ],
+                "total_cost_incurred_on_account_by_end_of_range": 565614.6192606492,
+                "total_growth_of_account_over_range": 764387.6829759415,
+                "total_yearly_cost_on_account": 43597.25427298761,
+                "total_yearly_investment_contributions_to_account": 22500
+            }
+        ],
+        "total_balance_from_all_investments_at_end_of_year_range": 1794184.554396941,
+        "total_expected_return": 0.1489793322745835,
+        "total_growth_of_all_accounts": 970561.1224451363,
+        "total_variance": 0.00006539570477341458,
+        "user_information": {
+            "current_amount_paying_in_taxes_annually": 3000,
+            "current_spending": 60000,
+            "retirement_age": 60,
+            "total_current_income": 100000,
+            "utility_of_expected_return": "TBD",
+            "utility_of_total_cost": "TBD",
+            "utility_of_volatility": "TBD",
+            "year_range_running_model_on": {
+                "end_age": 60,
+                "start_age": 30
+            }
+        }
+    },
+    "Recommendation2_AnnuityPrincipal": "needToImplement",
+    "personIsOk": {
+        "amountInRetirement": "current_investment_account_balance",
+        "moneyLeftAtEndOfYear": "remaining_money",
+        "personisOk": "resultTrueOrFalse",
+        "yearMoneyLastsUpTo": "y"
+    }
+}

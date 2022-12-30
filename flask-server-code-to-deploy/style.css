@@ -1,0 +1,52 @@
+.form-field,
+.form-field-inside {
+  position: relative;
+}
+
+#add,
+.box,
+.error,
+.age_error,
+.retire_age_error,
+.spent_error {
+  display: none;
+}
+
+.error,
+.age_error,
+.retire_age_error,
+.spent_error {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  color: red;
+  font-size: 12px;
+}
+
+.star {
+  color: red;
+  padding-right: 5px;
+}
+
+.row-change,
+.row-change > * {
+  padding-right: 0;
+}
+
+.btn-info{
+  color:white;
+  background-color: black;
+  border-color: black;
+  
+}
+
+#turn_on{
+  background-color:darkblue;
+  border: #1717e2;
+}
+
+#turn_on:hover{
+  background-color: #1717e2
+}
+
+.form-select option {font-size: 22px!important;}

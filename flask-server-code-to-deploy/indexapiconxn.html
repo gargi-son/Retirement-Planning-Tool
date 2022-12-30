@@ -1,0 +1,43 @@
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form id="form">
+      <label for="Xcoeff">X coeff</label>
+      <input type="text" name="Xcoeff" value="">
+      <label for="Ycoeff">Y coeff</label>
+      <input type="text" name="Ycoeff" value="">
+      <button type="button" name="submitButton" type="submit" onclick="wrapData()"></button>
+    </form>
+    <script type="text/javascript">
+      function wrapData() {
+
+         submittedForm = document.getElementById("form")
+         console.log(submittedForm)
+
+         // source used to access form elements using .name from html form: https://javascript.info/form-elements
+         var data = {
+                 "Xcoeff": submittedForm.Xcoeff.value,
+                 "Ycoeff": submittedForm.Ycoeff.value
+                 }
+
+        const headerObj = new Headers();
+        // source used to construct GET and POST requests according to fetch() function syntax: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+        // fetch('https://cs787-proj-app.herokuapp.com/',
+        fetch('http://127.0.0.1:5000/testSystemInput',
+          {
+            headers: {"Content-Type": "application/json"},
+            method: "POST",
+            body: JSON.stringify(data)
+          }
+        )
+         .then((response) => response.json())
+         .then((data) => console.log(data));
+      }
+    </script>
+
+  </body>
+</html>

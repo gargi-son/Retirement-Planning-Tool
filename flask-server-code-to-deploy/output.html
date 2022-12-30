@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Retirement Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="output.css">
+	<link rel="shortcut icon" href="#">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+	<script src="output.js"></script>
+</head>
+
+<body style="font-family: Lusitana; margin-left: 2.5em; margin-top: 2.5em">
+<div class="row">
+	<h4>Congratulations..<span>Your investment lasts through your retirement!</span></h4>
+</div>	
+<div class="row">
+	<p>Please view the following recommendations to better organize your investments..</p>
+</div>
+<br>
+<div class="row">
+<div class="col-sm-6">
+<div class="card w-75" >
+  <img src="assetallocation.jpg" class="card-img-top" alt="assetallocationimage">
+  <div class="card-body">
+    <h5 class="card-title">Option 1</h5>
+    <p class="card-text">Divide your investment funds among Bonds, US Stocks, and International Stocks.</p>
+	<!-- Modal Button -->
+	<button type="button" id = "modalButton1" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal1">View Suggestions</button>
+	<button type="button" id = "modalButton2" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal2">View Yearly Growth</button>
+	<!-- Modal 1 -->
+	<div id="Modal1" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+	<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+		<h4 class="modal-title">Yearly asset allocation for investment</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+		<!--flip card-->
+		<div class="flip-card">
+			<div class="flip-card-inner">
+			<div class="flip-card-back">
+				<canvas id="myPieChart"></canvas>
+			</div>
+			<div class="flip-card-front">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+						<th scope="col">Stocks</th>
+						<th scope="col">Retirement Account</th>
+						<th scope="col">% Contribution</th>
+						</tr>
+					</thead>
+					<tbody id="indiOutput">
+						<!--populated from js-->
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+		<!--flip card end-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- modal 1 end -->
+
+	<!-- Modal 2-->
+	<div id="Modal2" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+	<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+		<h4 class="modal-title">Yearly Growth</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+			<div class="row">
+				<canvas id="myChart"></canvas>
+			</div>
+			<br>
+			<div class="row">
+				<p>Yearly contribution amount: $<span id ="yr-contrib" font-size = "14px"></span></p>
+			</div>
+			<div class="row">
+				<p>Total Cost: $<span id ="cost-contrib" font-size = "14px"></span></p>
+			</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- modal 2 end -->
+</div> <!-- card-body -->
+</div> <!-- card -->
+</div> <!-- column -->
+
+<div class="col-sm-6">
+	<div class="card w-75" >
+	  <img src="annuities.jpg" class="card-img-top" alt="annuitiesimage">
+	  <div class="card-body">
+		<h5 class="card-title">Option 2</h5>
+		<p class="card-text">Invest in Annuity to get a fixed amount of money each year for the rest of your life</p>
+		<button type="button" class="btn btn-primary" data-toggle="popover" data-content="$50,000">View Investment Amount</button>
+		<br>
+	  </div>
+	</div>
+</div>
+</div> <!--row div-->
+</body>
+
+
+

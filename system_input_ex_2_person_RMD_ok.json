@@ -1,0 +1,38 @@
+{
+  "total_current_income": 40,
+  "current_annual_spending": 20,
+  "current_age": 71,
+  "accounts": [
+    {
+      "type": "Trad IRA",
+      "total_yearly_investment_contribution": 5,
+      "current_balance_investment_accounts": 10,
+      "rate_of_return_all_investments": 0.02,
+      "usChoice":  "VOO",
+      "intrnlChoice": "VXUS",
+      "bondChoice": "BND"
+    },
+    {
+      "type": "Roth 401k",
+      "total_yearly_investment_contribution": 5,
+      "current_balance_investment_accounts": 10,
+      "rate_of_return_all_investments": 0.02,
+      "usChoice": "VOO",
+      "intrnlChoice": "VXUS",
+      "bondChoice": "BND"
+    }
+  ],
+  "expected_annual_spending_in_retirement": 10,
+  "expected_monthly_SS_check_amount_in_retirement": 1,
+  "expected_monthly_pension_check_amount_in_retirement": 2,
+  "expected_part_time_job_annual_income_in_retirement": 0,
+  "retirement_age": 72,
+  "current_amount_paying_in_taxes_annually": 10,
+  "expected_amount_will_pay_in_taxes_annually_in_retirement": 5,
+  "expected_number_of_years_left_to_live_after_retirement": 20,
+  "expected_inflation": 0.02,
+  "expected_salary_increase": 0.02,
+  "how_important_expected_return_is_to_user": "TBD",
+  "how_important_volatility_is_to_user": "TBD",
+  "how_important_cost_is_to_user": "TBD"
+}

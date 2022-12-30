@@ -1,0 +1,90 @@
+{
+
+  "account_information": {
+    "account_type": "combined",
+    "subAccounts": [
+      "IRA",
+      "401k",
+      "HSA"
+    ],
+    "sub_account_inputs": {
+      "IRA": {
+        "account_information": {
+          "account_type": "IRA",
+          "account_asset_info": {
+            "VTI": {
+              "weight": {"dgalType": "real?"}
+            },
+            "Voo": {
+              "weight": {"dgalType": "real?"}
+            },
+            "BND": {
+              "weight": {"dgalType": "real?"}
+            },
+            "VXUS": {
+              "weight": {"dgalType": "real?"}
+            }
+          },
+          "total_yearly_investment_contribution": {"dgalType": "real?"},
+          "current_balance_investment_account": 2000
+        }
+      },
+      "HSA": {
+        "account_information": {
+          "account_type": "HSA",
+          "account_asset_info": {
+            "VTI": {
+              "weight": {"dgalType": "real?"}
+            },
+            "Voo": {
+              "weight": {"dgalType": "real?"}
+            },
+            "BND": {
+              "weight": {"dgalType": "real?"}
+            },
+            "VXUS": {
+              "weight": {"dgalType": "real?"}
+            }
+          },
+          "total_yearly_investment_contribution": {"dgalType": "real?"},
+          "current_balance_investment_account": 3000
+        }
+      },
+      "401k": {
+        "account_information": {
+          "account_type": "401k",
+          "account_asset_info": {
+            "VTI": {
+              "weight": {"dgalType": "real?"}
+            },
+            "Voo": {
+              "weight": {"dgalType": "real?"}
+            },
+            "BND": {
+              "weight": {"dgalType": "real?"}
+            },
+            "VXUS": {
+              "weight": {"dgalType": "real?"}
+            }
+          },
+          "total_yearly_investment_contribution": 700,
+          "current_balance_investment_account": 4000
+        }
+      }
+    }
+  },
+  "user_information": {
+    "total_current_income": 60000,
+    "current_spending": 25000,
+    "current_amount_paying_in_taxes_annually": 12000,
+    "retirement_age": 73,
+    "year_range_running_model_on": {
+      "start_age": 30,
+      "end_age": 31
+    },
+    "utility_of_expected_return": 0.3,
+    "utility_of_std_dev": 0.3,
+    "utility_of_total_cost": 0.3
+  }
+
+}

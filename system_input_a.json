@@ -1,0 +1,38 @@
+{
+  "total_current_income": 28000,
+  "current_annual_spending": 26400,
+  "current_age": 48,
+  "accounts": [
+    {
+      "type": "Brokerage",
+      "total_yearly_investment_contribution": 0,
+      "current_balance_investment_accounts": 43961,
+      "rate_of_return_all_investments": 0.03,
+      "usChoice":  "VOO",
+      "intrnlChoice": "VXUS",
+      "bondChoice": "BND"
+    },
+    {
+      "type": "Roth IRA",
+      "total_yearly_investment_contribution": 0,
+      "current_balance_investment_accounts": 85569,
+      "rate_of_return_all_investments": 0.03,
+      "usChoice": "VOO",
+      "intrnlChoice": "VXUS",
+      "bondChoice": "BND"
+    }
+  ],
+  "expected_annual_spending_in_retirement": 26400,
+  "expected_monthly_SS_check_amount_in_retirement": 0,
+  "expected_monthly_pension_check_amount_in_retirement": 0,
+  "expected_part_time_job_annual_income_in_retirement": 5000,
+  "retirement_age": 65,
+  "current_amount_paying_in_taxes_annually": 300,
+  "expected_amount_will_pay_in_taxes_annually_in_retirement": 200,
+  "expected_number_of_years_left_to_live_after_retirement": 20,
+  "expected_inflation": 0.02,
+  "expected_salary_increase": 0.02,
+  "how_important_expected_return_is_to_user": "TBD",
+  "how_important_volatility_is_to_user": "TBD",
+  "how_important_cost_is_to_user": "TBD"
+}
